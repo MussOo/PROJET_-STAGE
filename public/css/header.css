@@ -1,0 +1,145 @@
+/* ===== COULEURS ===== */
+:root {
+	--color-header-title-1: #4d4d4d;
+	--color-header-title-2: #b3b3b3;
+	--color-header-title-3: #808080;
+	--color-header-title-3-hover: #999999;
+}
+/* ==================== */
+
+
+
+/* ===== HEADER ===== */
+._header {
+	position: relative;
+	
+	overflow:hidden;
+	
+	padding:0;margin:0;
+	margin-bottom:120px;
+	
+	height: 192px;
+	border: 1px solid #000;
+}
+
+._header img {
+	position:absolute;
+	left:0;
+	height:100%;
+}
+
+._header h1 {
+	position: absolute;
+	top:37.5%;left:50%;
+	transform: translate(-50%,-50%);
+	font-size:3vw;
+}
+
+._header_user {
+	position: relative;
+	
+	font-size: 2vw;
+	font-color: var(--color-header-color-1);
+	
+	padding:0;margin:0;
+}
+
+._header_role {
+	position: relative;
+
+	font-color: var(--color-header-color-2);
+	font-size: 1.5vw;
+	
+	padding:0;margin:0;
+}
+/* ================== */
+
+
+
+
+/* ===== MENU ===== */
+._header_menu {
+	position:fixed;
+	top:0;right:0;
+	
+	background:white;
+	
+	overflow-y:auto;
+	
+	transition: all .5s linear;
+	
+	width:175px;
+	/* max-height:300px; */
+	height:100%;
+	
+	padding-top:35px;padding-bottom:25px;
+	padding-right:30px;padding-left:30px;
+	
+	border:1px solid #000;
+	border-left:3px solid #000;
+	border-right:none;
+}
+._header_menu.close {right:-260px;}
+
+
+/* BOUTON MENU */
+._header_button {
+	position:fixed;
+	top:5px;right:2px;	
+}
+
+._header_button form{
+	display: inline;
+}
+._header_button img{
+	position: relative;
+	top: 2px;
+	width:15px;
+	height:15px;
+}
+._header_button button{
+	color: #494949;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #ffffff;
+	padding: 5px;
+	border: 2px solid #494949;
+	border-radius: 5px;
+	display: inline-block;
+	
+}
+._header_button button:hover {
+	color: #ffffff ;
+	background: #494949;
+	border-color: #494949 ;
+	transition: all 0.4s ease 0s;
+	}
+
+
+/* LIENS MENU */
+._header_menu_link {
+	position: relative;
+	margin-top:5px;
+	margin-bottom:5px;
+	padding:0;
+	
+	border:1px solid #0000;
+	border-top:1px solid #0001;
+	border-bottom:1px solid #0001;
+	
+	transition:all .4s ease-out;
+	width:100%;
+	
+	font-color: var(--color-header-color-3);
+	font-size: 1.5vw;
+	
+	user-select: none;
+}
+
+._header_menu_link:hover {
+	border-top:1px solid #000;
+	border-bottom:1px solid #000;
+	
+	font-color: var(--color-header-color-3-hover);
+	/* font-size: 4.5vw; */
+}

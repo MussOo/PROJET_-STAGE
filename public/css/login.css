@@ -1,0 +1,151 @@
+/* CONTAINER */
+._login_container {
+	background:#0005;
+	
+	position:fixed;
+	top:0;
+	left:0;
+	
+	opacity:0;
+	z-index:99;
+	
+	transition:opacity 1s ease;
+	
+	width:100%;
+	height:100%;
+}
+
+/* FORMULAIRE */
+._login_form {
+	position:absolute;
+	top:-100%;left:50%;
+	transform: translate(-50%,-50%);
+	
+	transition:all 1.5s ease-out;
+	
+	padding:0;
+	
+	text-align: center;
+	
+	min-height:250px;
+	width:50%;height:50%;
+	max-width:800px;max-height:800px;
+	
+	border:5px solid #ECECEC;
+	border-radius:25px;
+	
+	background:#F4F4F4;
+}
+
+
+/* CHAMPS FORMULAIRE */
+._login_form input {
+	position:absolute;
+	/* top:50%; */
+	transform: translate(-50%,-50%);
+	
+	width:75%;
+	font-size:20px;
+	
+	text-align:center;
+	
+	background:#0001;
+	border:none;
+}
+._login_form input:focus {outline:none;}
+
+
+/* BOUTTONS FORMULAIRE */
+._login_form button {
+	position:absolute;
+	transform: translate(-50%,-50%);
+	
+	width:25%;
+	font-size:20px;
+	
+	text-align:center;
+	
+	background:#0001;
+	border:none;
+}
+._login_form button:focus {outline:none;}
+
+
+/* TITRE FORMULAIRE */
+._login_form h1 {
+	position:absolute;
+	transform: translate(-50%,-50%);
+	font-size:4vw;
+	margin:0;
+	top:15%;left:50%;
+}
+
+/* AUTRES TEXTE FORMULAIRE */
+._login_form p {
+	position:absolute;
+	transform: translate(-50%,-50%);
+	font-size:1.5vw;
+	margin:0;
+	left:50%;
+}
+
+/* POSITIONS CHAMPS */
+._login_form_username {top:35%;}
+._login_form_password {top:55%;}
+._login_form_submit {top:75%;}
+._login_form_message {bottom:0;}
+
+/* Bouton See Password */
+.see-password {
+	position:absolute;
+	top:55%;right:12%;
+	
+	transform: translate(-50%,-50%);
+	width:24px;height:24px;
+	
+	opacity:.5;
+	transition:opacity .25s linear;
+	
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.see-password:hover {opacity:1;}
+
+.see-password.off {background-image: url("../img/login/eye-blind.png");}
+.see-password.on {background-image: url("../img/login/eye-visible.png");}
+
+
+/* COULEURS MESSAGE */
+._login_form_message.error {color:red;}
+._login_form_message.info {color:blue;}
+._login_form_message.success {color:green;}
+
+/* CLOSE MARK */
+._login_form_close {
+	border-radius:50%;
+	width:24px;
+	height:24px;
+	
+	position:absolute;
+	top:0;right:0;
+	transform: translate(-25%,25%);
+}
+._login_form_close:hover {color:red;}
+
+._login_form_close:after {
+	content:"🞩";
+	
+	position:absolute;
+	top:50%;left:50%;
+	
+	font-size:24px;
+	transform: translate(-50%,-50%);
+}
+
+
+/* FORMULAIRE OPEN|CLOSE */
+._login_container.open {opacity:1;z-index:99;}
+._login_container.open ._login_form {top:50%;}
+
+._login_container.close {opacity:0;z-index:-99;}
+._login_container.close ._login_form {top:-100%;}
